@@ -1,8 +1,10 @@
 package Editor;
 
 import listeners.FrameListener;
+import listeners.TabbedPaneChangeListener;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -40,6 +42,18 @@ public class View extends JFrame implements ActionListener {
     }
 
     public void initEditor() {
+        htmlTextPane.setContentType("text/html");
+        JScrollPane htmlScrollPane = new JScrollPane(htmlTextPane);
+        tabbedPane.addTab("HTML", htmlScrollPane);
+
+        JScrollPane plainScrollPane = new JScrollPane(plainTextPane);
+        tabbedPane.add("Текст", plainScrollPane);
+
+        tabbedPane.setPreferredSize(new Dimension(300, 300));
+
+        tabbedPane.addChangeListener(new TabbedPaneChangeListener(this));
+
+        getContentPane().add(tabbedPane, BorderLayout.CENTER);
 
     }
 
