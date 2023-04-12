@@ -13,6 +13,6 @@ public class RedoAction extends AbstractAction {
     }
 
     public void actionPerformed(ActionEvent e) {
-
+        view.redo();
     }
 }
