@@ -4,6 +4,8 @@ import actions.RedoAction;
 import actions.StrikeThroughAction;
 import actions.SubscriptAction;
 import actions.UndoAction;
+import listeners.TextEditMenuListener;
+import listeners.UndoMenuListener;
 
 import javax.swing.*;
 import javax.swing.text.DefaultEditorKit;
