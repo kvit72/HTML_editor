@@ -1,9 +1,6 @@
 package Editor;
 
-import actions.RedoAction;
-import actions.StrikeThroughAction;
-import actions.SubscriptAction;
-import actions.UndoAction;
+import actions.*;
 import listeners.TextEditMenuListener;
 import listeners.UndoMenuListener;
 
@@ -102,7 +99,7 @@ public class MenuHelper {
         styleMenu.addSeparator();
 
         addMenuItem(styleMenu, "Подстрочный знак", new SubscriptAction());
-        addMenuItem(styleMenu, "Надстрочный знак", new SubscriptAction());
+        addMenuItem(styleMenu, "Надстрочный знак", new SuperscriptAction());
         addMenuItem(styleMenu, "Зачеркнутый", new StrikeThroughAction());
 
         styleMenu.addMenuListener(new TextEditMenuListener(view));

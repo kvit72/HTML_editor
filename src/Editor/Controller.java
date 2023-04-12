@@ -27,6 +27,5 @@ public class Controller {
         view.setController(controller);
         view.init();
         controller.init();
-
     }
 }
